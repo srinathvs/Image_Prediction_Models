@@ -31,7 +31,6 @@ class PlotLearning(tensorflow.keras.callbacks.Callback):
 
         f, axs = plt.subplots(1, len(metrics), figsize=(15, 5))
 
-
         for i, metric in enumerate(metrics):
             axs[i].plot(range(1, epoch + 2),
                         self.metrics[metric],
@@ -46,8 +45,6 @@ class PlotLearning(tensorflow.keras.callbacks.Callback):
 
         plt.tight_layout()
         plt.show()
-
-
 
 
 def normalize_resize(image, label):
